@@ -1,0 +1,183 @@
+---
+import { Image } from "astro:assets";
+---
+
+<header
+  class="border-b border-border sticky top-0 bg-background/95 backdrop-blur z-10"
+>
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a href="/" class="flex items-center gap-3">
+      <div class="bg-primary/10 p-2 rounded-lg">
+        <Image
+          src="/perfume-icon.svg"
+          alt="Perfume Collection Logo"
+          width={32}
+          height={32}
+          class="w-6 h-6 object-contain"
+        />
+      </div>
+      <span class="font-bold text-xl tracking-tight">Perfume Collection</span>
+    </a>
+
+    <nav class="hidden md:flex items-center space-x-1">
+      <a
+        href="/"
+        class="px-4 py-2 rounded-md font-medium hover:bg-primary/10 transition-colors"
+      >
+        Home
+      </a>
+      <a
+        href="/products"
+        class="px-4 py-2 rounded-md font-medium hover:bg-primary/10 transition-colors"
+      >
+        Products
+      </a>
+      <a
+        href="/about"
+        class="px-4 py-2 rounded-md font-medium hover:bg-primary/10 transition-colors"
+      >
+        About
+      </a>
+      <a
+        href="/contact"
+        class="px-4 py-2 rounded-md font-medium hover:bg-primary/10 transition-colors"
+      >
+        Contact
+      </a>
+    </nav>
+
+    <div class="flex items-center gap-4">
+      <div class="hidden md:flex items-center gap-2">
+        <input
+          type="text"
+          placeholder="Search..."
+          class="px-3 py-1 rounded-md border border-border focus:outline-none focus:ring-2 focus:ring-primary/50"
+          id="search-input"
+        />
+        <button
+          class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-primary/10 transition-colors"
+          id="search-button"
+        >
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+
+      <button
+        id="mobile-menu-toggle"
+        class="md:hidden flex items-center justify-center w-10 h-10 rounded-full hover:bg-primary/10 transition-colors"
+        aria-label="Toggle menu"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden hidden">
+    <nav class="container mx-auto px-6 py-4 space-y-2 border-t border-border">
+      <a
+        href="/"
+        class="block px-4 py-3 rounded-md font-medium hover:bg-primary/10 transition-colors"
+      >
+        Home
+      </a>
+      <a
+        href="/products"
+        class="block px-4 py-3 rounded-md font-medium hover:bg-primary/10 transition-colors"
+      >
+        Products
+      </a>
+      <a
+        href="/about"
+        class="block px-4 py-3 rounded-md font-medium hover:bg-primary/10 transition-colors"
+      >
+        About
+      </a>
+      <a
+        href="/contact"
+        class="block px-4 py-3 rounded-md font-medium hover:bg-primary/10 transition-colors"
+      >
+        Contact
+      </a>
+
+      <div class="flex items-center gap-3 px-4 py-3">
+        <input
+          type="text"
+          placeholder="Search..."
+          class="px-3 py-1 rounded-md border border-border focus:outline-none focus:ring-2 focus:ring-primary/50 w-full"
+          id="mobile-search-input"
+        />
+        <button
+          class="flex items-center gap-2 px-4 py-2 rounded-md hover:bg-primary/10 transition-colors"
+          id="mobile-search-button"
+        >
+          <i class="fas fa-search"></i>
+          <span>Search</span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("mobile-menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    if (menuToggle && mobileMenu) {
+      menuToggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+
+    // Search functionality
+    const searchInput = document.getElementById(
+      "search-input",
+    ) as HTMLInputElement;
+    const searchButton = document.getElementById(
+      "search-button",
+    ) as HTMLButtonElement;
+    const mobileSearchInput = document.getElementById(
+      "mobile-search-input",
+    ) as HTMLInputElement;
+    const mobileSearchButton = document.getElementById(
+      "mobile-search-button",
+    ) as HTMLButtonElement;
+
+    const handleSearch = (query: string) => {
+      if (query.trim()) {
+        console.log("Navbar sending search:", query); // Debug log
+        // Ensure we're on the products page with the search parameter
+        const currentPath = window.location.pathname;
+        const searchUrl = currentPath === '/products' 
+          ? `/products?search=${encodeURIComponent(query)}`
+          : `/products?search=${encodeURIComponent(query)}`;
+        window.location.href = searchUrl;
+      }
+    };
+
+    if (searchInput && searchButton) {
+      searchButton.addEventListener("click", () => {
+        handleSearch(searchInput.value);
+      });
+
+      searchInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          handleSearch(searchInput.value);
+        }
+      });
+    }
+
+    if (mobileSearchInput && mobileSearchButton) {
+      mobileSearchButton.addEventListener("click", () => {
+        handleSearch(mobileSearchInput.value);
+      });
+
+      mobileSearchInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          handleSearch(mobileSearchInput.value);
+        }
+      });
+    }
+  });
+</script>

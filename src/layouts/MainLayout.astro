@@ -1,0 +1,71 @@
+---
+import "../styles/globals.css";
+import Navbar from "@/components/Navbar.astro";
+import Footer from "@/components/Footer.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Exquisite perfume collection showcasing the finest fragrances" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title} | Perfume Collection</title>
+    <style>
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+        }
+      }
+      .whatsapp-btn {
+        animation: pulse 2s infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="min-h-screen flex flex-col">
+      <Navbar />
+      <main class="flex-grow container mx-auto px-4 py-8">
+        <slot />
+      </main>
+      <Footer />
+      
+      <!-- Floating WhatsApp Button -->
+      <a 
+        href="https://wa.me/1234567890" 
+        target="_blank"
+        rel="noopener noreferrer"
+        class="whatsapp-btn fixed bottom-6 right-6 bg-green-500 text-white rounded-full p-4 shadow-lg hover:bg-green-600 transition-colors z-50 flex items-center justify-center"
+        aria-label="Contact us on WhatsApp"
+      >
+        <i class="fab fa-whatsapp text-2xl"></i>
+      </a>
+    </div>
+    
+    <!-- Font Awesome Script (only if not already loaded in Footer) -->
+    <script>
+      // Check if Font Awesome is already loaded
+      if (!('FontAwesome' in window)) {
+        const script = document.createElement('script');
+        script.src = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js";
+        script.integrity = "sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==";
+        script.crossOrigin = "anonymous";
+        script.referrerPolicy = "no-referrer";
+        document.body.appendChild(script);
+      }
+    </script>
+  </body>
+</html> 

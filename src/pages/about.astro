@@ -1,0 +1,354 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+---
+
+<MainLayout title="About Us">
+  <section class="py-12 md:py-20">
+    <div class="container mx-auto px-4">
+      <!-- Hero Section -->
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Story</h1>
+        <div class="w-20 h-1 bg-primary mx-auto mb-8"></div>
+        <p class="text-lg text-muted-foreground max-w-3xl mx-auto">
+          Discover the passion and craftsmanship behind our exclusive perfume
+          collection. Every scent tells a story, and every bottle captures a
+          moment.
+        </p>
+      </div>
+
+      <!-- Our Journey -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
+        <div class="rounded-xl overflow-hidden shadow-xl">
+          <img
+            src="https://images.unsplash.com/photo-1608528577891-eb055944f2e7"
+            alt="Perfume artisan at work"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="space-y-6">
+          <h2 class="text-3xl font-bold">Our Journey</h2>
+          <p class="text-muted-foreground">
+            Founded in 2010 in the heart of Grasse, France - the world's perfume
+            capital - our perfume house began as a small artisanal workshop with
+            just three passionate perfumers. We were dedicated to creating
+            unique, handcrafted fragrances that stand apart from mass-produced
+            scents, using only the finest natural ingredients sourced from
+            sustainable farms around the world.
+          </p>
+          <p class="text-muted-foreground">
+            Our founder, Master Perfumer Jean-Luc Moreau, brought over 20 years
+            of experience from prestigious perfume houses before establishing
+            our brand. He set out to create fragrances that tell stories and
+            evoke emotions, drawing inspiration from his travels across six
+            continents and his deep knowledge of traditional perfume-making
+            techniques.
+          </p>
+          <p class="text-muted-foreground">
+            In our first five years, we gained recognition by winning three
+            international fragrance awards, including the prestigious Prix
+            International du Parfum in 2014. This helped us expand from our
+            original 500 sq ft workshop to a state-of-the-art facility while
+            maintaining our small-batch production philosophy.
+          </p>
+          <p class="text-muted-foreground">
+            Today, we're proud to have grown into one of the most respected
+            names in artisanal perfumery, with our creations being featured in
+            luxury boutiques across 32 countries. Despite this growth, we remain
+            committed to our core values of quality, creativity, and sustainable
+            practices - each bottle is still hand-filled and inspected by our
+            team of expert perfumers.
+          </p>
+          <div class="pt-4">
+            <a
+              href="/products"
+              class="px-6 py-3 bg-black text-white rounded-md hover:bg-black/90 transition-colors font-medium inline-flex items-center gap-2"
+            >
+              <i class="fas fa-flask"></i>
+              Explore Our Collection
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Our Philosophy -->
+      <div
+        class="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 md:p-12 mb-24 mx-auto w-full max-w-screen-2xl px-8"
+      >
+        <div class="text-center max-w-6xl mx-auto">
+          <h2 class="text-3xl font-bold mb-6">Our Philosophy</h2>
+          <p class="text-lg mb-8">
+            We believe that perfume is more than just a fragrance—it's an
+            expression of individuality, a trigger for memories, and a
+            complement to life's special moments.
+          </p>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 px-2"
+          >
+            <div class="bg-white rounded-xl p-5 shadow-md">
+              <div
+                class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3"
+              >
+                <i class="fas fa-leaf text-xl text-primary"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-2">Sustainability</h3>
+              <p class="text-muted-foreground text-sm">
+                Using ethically sourced ingredients and eco-friendly packaging
+                to minimize our environmental impact.
+              </p>
+            </div>
+            <div class="bg-white rounded-xl p-5 shadow-md">
+              <div
+                class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3"
+              >
+                <i class="fas fa-flask text-xl text-primary"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-2">Craftsmanship</h3>
+              <p class="text-muted-foreground text-sm">
+                Blending traditional techniques with modern innovation to create
+                complex, sophisticated fragrances.
+              </p>
+            </div>
+            <div class="bg-white rounded-xl p-5 shadow-md">
+              <div
+                class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3"
+              >
+                <i class="fas fa-heart text-xl text-primary"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-2">Inclusivity</h3>
+              <p class="text-muted-foreground text-sm">
+                Creating scents that transcend gender, age, and cultural
+                boundaries, making perfume accessible to all.
+              </p>
+            </div>
+            <div class="bg-white rounded-xl p-5 shadow-md">
+              <div
+                class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3"
+              >
+                <i class="fas fa-seedling text-xl text-primary"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-2">Natural Ingredients</h3>
+              <p class="text-muted-foreground text-sm">
+                Prioritizing pure, natural essences that are gentle on skin and
+                the environment.
+              </p>
+            </div>
+            <div class="bg-white rounded-xl p-5 shadow-md">
+              <div
+                class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3"
+              >
+                <i class="fas fa-star text-xl text-primary"></i>
+              </div>
+              <h3 class="text-lg font-bold mb-2">Luxury Experience</h3>
+              <p class="text-muted-foreground text-sm">
+                Every bottle delivers an elevated sensory experience, from
+                fragrance to packaging.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Our Process -->
+      <div class="mb-24">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          Our Perfume Creation Process
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 relative"
+            >
+              <span
+                class="absolute -top-3 -right-3 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-bold"
+                >1</span
+              >
+              <i class="fas fa-lightbulb text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Inspiration</h3>
+            <p class="text-muted-foreground">
+              Each scent begins with a concept, a story we want to tell through
+              fragrance.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 relative"
+            >
+              <span
+                class="absolute -top-3 -right-3 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-bold"
+                >2</span
+              >
+              <i class="fas fa-search text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Ingredient Selection</h3>
+            <p class="text-muted-foreground">
+              We source the finest raw materials from around the world, focusing
+              on quality and sustainability.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 relative"
+            >
+              <span
+                class="absolute -top-3 -right-3 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-bold"
+                >3</span
+              >
+              <i class="fas fa-vial text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Composition</h3>
+            <p class="text-muted-foreground">
+              Our master perfumers craft the formula, balancing notes to create
+              a harmonious and complex scent.
+            </p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 relative"
+            >
+              <span
+                class="absolute -top-3 -right-3 w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-bold"
+                >4</span
+              >
+              <i class="fas fa-check-circle text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Refinement</h3>
+            <p class="text-muted-foreground">
+              Each fragrance undergoes extensive testing and refinement until it
+              achieves perfection.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonials -->
+      <div
+        class="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 md:p-12 mb-24"
+      >
+        <h2 class="text-3xl font-bold text-center mb-12">
+          What Our Customers Say
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-white rounded-xl p-6 shadow-md relative">
+            <div class="absolute -top-5 left-6">
+              <i class="fas fa-quote-left text-4xl text-primary/20"></i>
+            </div>
+            <p class="text-muted-foreground mb-6 pt-4">
+              "I've tried many perfumes over the years, but nothing compares to
+              the depth and longevity of these fragrances. My signature scent
+              never fails to get compliments."
+            </p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img
+                  src="https://randomuser.me/api/portraits/women/32.jpg"
+                  alt="Customer"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold">Jessica M.</h4>
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-white rounded-xl p-6 shadow-md relative">
+            <div class="absolute -top-5 left-6">
+              <i class="fas fa-quote-left text-4xl text-primary/20"></i>
+            </div>
+            <p class="text-muted-foreground mb-6 pt-4">
+              "The attention to detail in these perfumes is remarkable. I
+              appreciate how each scent evolves throughout the day, revealing
+              different notes as time passes."
+            </p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img
+                  src="https://randomuser.me/api/portraits/men/46.jpg"
+                  alt="Customer"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold">Robert T.</h4>
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-white rounded-xl p-6 shadow-md relative">
+            <div class="absolute -top-5 left-6">
+              <i class="fas fa-quote-left text-4xl text-primary/20"></i>
+            </div>
+            <p class="text-muted-foreground mb-6 pt-4">
+              "I love supporting a brand that prioritizes sustainability. The
+              fact that these perfumes are both eco-friendly and luxurious makes
+              them the perfect choice."
+            </p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img
+                  src="https://randomuser.me/api/portraits/women/65.jpg"
+                  alt="Customer"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold">Aisha K.</h4>
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA Section -->
+      <div class="text-center max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Experience Our Collection</h2>
+        <p class="text-lg text-muted-foreground mb-8">
+          Ready to discover your signature scent? Explore our collection of
+          handcrafted perfumes and find the fragrance that speaks to you.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="/products"
+            class="px-8 py-4 bg-black text-white rounded-md hover:bg-black/90 transition-colors font-medium shadow-md inline-flex items-center gap-2"
+          >
+            <i class="fas fa-shopping-bag"></i>
+            Shop Now
+          </a>
+          <a
+            href="/contact"
+            class="px-8 py-4 border border-black text-black rounded-md hover:bg-black/5 transition-colors font-medium inline-flex items-center gap-2"
+          >
+            <i class="fas fa-envelope"></i>
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>

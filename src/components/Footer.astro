@@ -1,0 +1,135 @@
+---
+import { products } from "@/data/products";
+const topProducts = products.slice(0, 3); // Get top 3 products
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-border bg-background">
+  <div class="container mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="md:col-span-2">
+        <div class="flex items-center gap-3 mb-5">
+          <div class="bg-primary/10 p-2 rounded-lg">
+            <img
+              src="/perfume-icon.svg"
+              alt="Perfume Collection Logo"
+              class="h-8 w-8 object-contain"
+            />
+          </div>
+          <span class="font-bold text-xl tracking-tight"
+            >Perfume Collection</span
+          >
+        </div>
+        <p class="text-muted-foreground leading-relaxed mb-6 max-w-md">
+          Discover our exquisite collection of premium fragrances for every
+          occasion. Handcrafted with passion and attention to detail.
+        </p>
+
+        <div class="flex flex-wrap gap-3 mt-6">
+          <a
+            href="https://www.instagram.com/vaa"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center h-10 w-10 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+            aria-label="Instagram"
+          >
+            <i class="fab fa-instagram text-lg"></i>
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center justify-center h-10 w-10 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+            aria-label="Twitter"
+          >
+            <i class="fab fa-twitter text-lg"></i>
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center justify-center h-10 w-10 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+            aria-label="Facebook"
+          >
+            <i class="fab fa-facebook-f text-lg"></i>
+          </a>
+          <a
+            href="https://wa.me/1234567890"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center h-10 w-10 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+            aria-label="WhatsApp"
+          >
+            <i class="fab fa-whatsapp text-lg"></i>
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center justify-center h-10 w-10 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+            aria-label="YouTube"
+          >
+            <i class="fab fa-youtube text-lg"></i>
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center justify-center h-10 w-10 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+            aria-label="Pinterest"
+          >
+            <i class="fab fa-pinterest-p text-lg"></i>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="font-bold text-lg mb-4">Shop</h3>
+        {
+          topProducts.map((product) => (
+            <a href={`/products/${product.id}`} class="block mb-2">
+              <h3>{product.name}</h3>
+            </a>
+          ))
+        }
+      </div>
+
+      <div>
+        <h3 class="font-bold text-lg mb-4">Company</h3>
+        <ul class="space-y-3">
+          <li>
+            <a
+              href="/products"
+              class="text-muted-foreground hover:text-primary transition-colors"
+            >
+              All Products
+            </a>
+          </li>
+          <li>
+            <a
+              href="/about"
+              class="text-muted-foreground hover:text-primary transition-colors"
+            >
+              About Us
+            </a>
+          </li>
+          <li>
+            <a
+              href="/contact"
+              class="text-muted-foreground hover:text-primary transition-colors"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="border-t border-border mt-12 pt-8 flex justify-center items-center text-sm text-muted-foreground"
+    >
+      <div>
+        &copy; {year} Perfume Collection. All rights reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Font Awesome Script -->
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
+  integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"></script>
