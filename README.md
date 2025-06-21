@@ -29,8 +29,8 @@ A modern, elegant e-commerce website for selling luxury perfumes, built with Ast
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/amananilofficial/perfume.git
-   cd perfume
+   git clone https://github.com/amananilofficial/perfumecollection.com.git
+   cd perfumecollection.com
    ```
 
 2. Install dependencies:
