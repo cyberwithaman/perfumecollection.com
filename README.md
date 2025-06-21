@@ -18,21 +18,6 @@ A modern, elegant e-commerce website for selling luxury perfumes, built with Ast
 - **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
 - **Icons**: [Lucide React](https://lucide.dev/guide/packages/lucide-react)
 
-## 📦 Project Structure
-
-```
-/
-├── public/           # Static assets
-├── src/
-│   ├── components/   # UI components
-│   ├── data/         # Product data
-│   ├── layouts/      # Page layouts
-│   ├── lib/          # Utility functions
-│   ├── pages/        # Page components
-│   └── styles/       # Global styles
-└── package.json      # Project dependencies
-```
-
 ## 🚀 Getting Started
 
 ### Prerequisites
