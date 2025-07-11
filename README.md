@@ -29,7 +29,7 @@ A modern, elegant e-commerce website for selling luxury perfumes, built with Ast
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/amananilofficial/perfumecollection.com.git
+   git clone https://github.com/cyberwithaman/perfumecollection.com.git
    cd perfumecollection.com
    ```
 
